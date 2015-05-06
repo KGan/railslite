@@ -1,20 +1,10 @@
-# w5d2: [Rails Lite!][description]
+#  Rails Lite
 
-## Using The Specs
+A project in understanding the rails framework, REST request lifecycle, MVC abstractions (ORM models, Controllers, View templating) and metaprogramming (route generations).
 
-Some specs have been written to guide you towards the lite. There are
-rspec specs in the `spec` directory and demo servers for you to try
-in the `bin` directory.
+## Usage...if you insist
+Clone the repo and run `ruby  bin/bonus_server.rb`
+Your routes are defined in `lib/finalized/routes.rb`
+There is no separate folder for loading controller or model class files into yet, you'll have to smash them into the bonus server like the examples
+Views are in `views` and you have access to the cookie through session (persisted) and flash (both flash and flash.now work)
 
-## Suggested Order
-
-0.  `bundle exec rspec spec/p02_controller_spec.rb`
-0.  `bundle exec rspec spec/p03_template_spec.rb`
-0.  `bundle exec rspec spec/p04_session_spec.rb`
-0.  `bundle exec rspec spec/p05_params_spec.rb`
-0.  `bundle exec rspec spec/p06_router_spec.rb`
-0.  `bundle exec rspec spec/p07_integration_spec.rb`
-
-Run `bundle exec rspec` to run all the spec files.
-
-[description]: https://github.com/appacademy/rails-curriculum/blob/master/projects/w5d2-rails-lite-i.md

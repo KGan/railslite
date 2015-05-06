@@ -44,12 +44,22 @@ class CatsController < Bonus::ControllerBase
     end
     render_content($cats.to_s + ' hi ' + "#{flash['error']}", "text/HTML")
   end
+
+  def create
+    @cat = Cat.new(fname: 'lulcagt', lname: 'thingy', owner_id: 1)
+    if @cat.save
+      render 'cats_controller/show'
+    else
+      render 'fail'
+    end
+  end
 end
 
 router = Bonus::Router.new
 router.draw do
   get '/cats', 'cats#index'
   get '/cats/:cat_id/statuses', 'statuses#index'
+  post '/cats', 'cats#create'
   # get Regexp.new("^/cats/(?<cat_id>\\d+)/statuses$"), StatusesController, :index
 end
 
